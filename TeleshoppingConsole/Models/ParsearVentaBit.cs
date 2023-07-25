@@ -127,8 +127,8 @@ namespace TeleshoppingConsole.Models
                                 Color = detalle.Color, //SUBART2                          
                                 Cantidad = detalle.Cantidad.ToString(),
                                     Precio = traeVentasPago[0].MonedaPag == "1" && detalle.TipoMoneda == "1" ?
-                                    (Math.Truncate(detalle.Precio * 100) / 100) : traeVentasPago[0].MonedaPag == "1" && detalle.TipoMoneda == "2" ?
-                                    (Math.Truncate(detalle.Precio * tazaActual * 100) / 100) :
+                                    (Math.Round(detalle.Precio * 100) / 100) : traeVentasPago[0].MonedaPag == "1" && detalle.TipoMoneda == "2" ?
+                                    (Math.Round(detalle.Precio * tazaActual * 100) / 100) :
                                     (traeVentasPago[0].MonedaPag == "2" && detalle.TipoMoneda == "1" ?
                                     (Math.Round(detalle.Precio / tazaActual * 100) / 100) : detalle.Precio)
                                 });
@@ -170,7 +170,7 @@ namespace TeleshoppingConsole.Models
                                     //(Math.Round(num)) : num,
                                     Monto = traeVentasPago[0].MonedaPag == "1" && pago.MonedaPag == "1" ?
                                     num : traeVentasPago[0].MonedaPag == "1" && pago.MonedaPag == "2" ?
-                                    (Math.Truncate(num * tazaActual * 100) / 100) :
+                                    (Math.Round(num * tazaActual * 100) / 100) :
                                     (traeVentasPago[0].MonedaPag == "2" && pago.MonedaPag == "1" ?
                                     (Math.Round((num / tazaActual) * 100) / 100) : num)
                                 });
