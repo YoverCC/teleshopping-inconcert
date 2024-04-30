@@ -552,3 +552,7 @@ FodyWeavers.xsd
 # LOGS FROM FOLDERS TELESHOPPINGCONSOLE AND TELESHOPPINGCONSOLE-ARTICULOS
 TeleshoppingConsole/Logs/*
 TeleshoppingConsole - Articulos/Logs/*
+TeleshoppingConsole - TipoCambio/Logs/*
+TeleshoppingConsole/bin
+TeleshoppingConsole - Articulos/bin
+TeleshoppingConsole - TipoCambio/bin

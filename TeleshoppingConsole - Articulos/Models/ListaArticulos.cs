@@ -47,7 +47,7 @@ namespace TeleshoppingConsoleArticulo.Models
 
             private string descripcionField;
 
-            private byte estadoField;
+            private int estadoField;
 
             private string talleField;
 
@@ -61,7 +61,7 @@ namespace TeleshoppingConsoleArticulo.Models
 
             private object comentariosField;
 
-            private sbyte stockField;
+            private int stockField;
 
             private decimal pRECIOField;
 
@@ -104,7 +104,7 @@ namespace TeleshoppingConsoleArticulo.Models
             }
 
             /// <remarks/>
-            public byte estado
+            public int estado
             {
                 get
                 {
@@ -195,7 +195,7 @@ namespace TeleshoppingConsoleArticulo.Models
             }
 
             /// <remarks/>
-            public sbyte stock
+            public int stock
             {
                 get
                 {

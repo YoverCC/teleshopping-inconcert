@@ -23,14 +23,18 @@ namespace TeleshoppingConsoleArticulo
                     retainedFileCountLimit: 7
                  )
                 .CreateLogger();
-            var hasta = DateTime.UtcNow;
-            var desde = hasta.AddMinutes(-30);
+            var guid = Guid.NewGuid().ToString();
             try
             {               
                IObtenerArticulos obtenerArticulos = new BitServiceSOAP();
                List<Articulo> listaArticulos = obtenerArticulos.GetArticulos();
                ITratamientoArticulos tratamientoArticulos = new BaseDeDatos();
-               tratamientoArticulos.TratarArticulo(listaArticulos);
+
+                tratamientoArticulos.PreTratarArticulo(guid);
+
+                tratamientoArticulos.TratarArticulo(listaArticulos);
+
+                tratamientoArticulos.PostTratarArticulo(guid);
 
                 Console.WriteLine("Fin de consumo de artìculos");
             }

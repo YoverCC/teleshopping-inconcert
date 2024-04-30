@@ -31,7 +31,7 @@ namespace TeleshoppingConsoleArticulo.Models
         [XmlElement(ElementName = "comentarios")]
         public object Comentarios { get; set; }
         [XmlElement(ElementName = "stock")]
-        public sbyte Stock { get; set; }
+        public int Stock { get; set; }
         [XmlElement(ElementName = "PRECIO")]
         public decimal Precio { get; set; }
         [XmlElement(ElementName = "CallBackS")]

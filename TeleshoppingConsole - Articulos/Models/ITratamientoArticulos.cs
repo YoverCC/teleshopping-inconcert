@@ -9,5 +9,8 @@ namespace TeleshoppingConsoleArticulo.Models
     public interface ITratamientoArticulos
     {
         public void TratarArticulo(List<Articulo> articulos);
+        public void PreTratarArticulo(string guid);
+
+        public void PostTratarArticulo(string guid);
     }
 }

@@ -25,14 +25,48 @@ namespace TeleshoppingConsoleArticulo.Models
             _LOGGER = new Logger();
         }
 
+
+        public void PreTratarArticulo(string guid)
+        {
+   
+                this.connection.Open();
+                SqlCommand cmd = this.connection.CreateCommand();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "PreTratamientoArticulos";
+                cmd.Parameters.Add("@guid", System.Data.SqlDbType.NVarChar);
+                cmd.Parameters["@guid"].Value = guid;
+                SqlDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    if (reader.Read())
+                    {
+                        if (reader[0].ToString() != "OK")
+                        {
+                            _LOGGER.Error($"No se pudo limpiar la tabla de ArticulosRecibidosBIT con Id proceso: " + guid);
+                        }
+                        else
+                        {
+                            _LOGGER.Info($"OK: Se borraron registros de la tabla de ArticulosRecibidosBIT con Id proceso: " + guid);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _LOGGER.Error(ex, $"No se pudo limpiar la tabla de ArticulosRecibidosBIT por error de BD con Id proceso: " + guid);
+                }
+                finally
+                {
+                    this.connection.Close();
+                }
+        
+        }
+
         public void TratarArticulo(List<Articulo> articulos)
         {
             try
             {
                 if(articulos != null)
                 {
-                    using (this.connection)
-                    {
                         this.connection.Open();
                         SqlCommand cmd = this.connection.CreateCommand();
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -83,7 +117,9 @@ namespace TeleshoppingConsoleArticulo.Models
                             }
                             reader.Close();
                         });
-                    }
+
+                        
+                    
                 }
                 else
                 {
@@ -93,7 +129,50 @@ namespace TeleshoppingConsoleArticulo.Models
             catch (Exception ex)
             {
                 _LOGGER.Error(ex, "Hubo un error en tratar los articulos");
+
             }
+            finally
+            {
+                this.connection.Close();
+            }
+
         }
+
+        public void PostTratarArticulo(string guid)
+        {
+
+                this.connection.Open();
+                SqlCommand cmd = this.connection.CreateCommand();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "PostTratamientoArticulos";
+                cmd.Parameters.Add("@guid", System.Data.SqlDbType.NVarChar);
+                cmd.Parameters["@guid"].Value = guid;
+                SqlDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    if (reader.Read())
+                    {
+                        if (reader[0].ToString() != "OK")
+                        {
+                            _LOGGER.Error($"No se pudo procesar sp PostTratamientoArticulos con Id proceso: " + guid);
+                        }
+                        else {
+                            _LOGGER.Info($"Procesado sp PostTratamientoArticulos con Id proceso: " + guid);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _LOGGER.Error(ex, $"No se pudo procesar sp PostTratamientoArticulos por error de BD con Id proceso: " + guid);
+                    
+                }
+                finally
+                {
+                    this.connection.Close();
+                }
+            
+        }
+
+
     }
 }

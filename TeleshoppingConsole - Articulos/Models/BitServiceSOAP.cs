@@ -37,7 +37,8 @@ namespace TeleshoppingConsoleArticulo.Models
         public List<Articulo> GetArticulos()
         {
             string keyCodeBit = ConfigurationManager.AppSettings["keyCodeBit"];
-            var fecha = DateTime.UtcNow.AddDays(-1).ToString("yyyyMMdd");
+            // Fecha que va como parametro
+            var fecha = DateTime.UtcNow.ToString("yyyyMMdd");
             Console.WriteLine(fecha);
             wsGenQuerySoapClient bitWebService =
                 new(wsGenQuerySoapClient.EndpointConfiguration.wsGenQuerySoap);
@@ -62,9 +63,11 @@ namespace TeleshoppingConsoleArticulo.Models
             XmlSerializer xmlSerializer = new(typeof(NewDataSet), new XmlRootAttribute("NewDataSet"));
             try
             {
+                Console.WriteLine("1");
                 NewDataSet listaDeArticulos = (NewDataSet)xmlSerializer.Deserialize(xmlDocument.CreateReader());
+                Console.WriteLine("2");
                 var articulos = listaDeArticulos.Table.ToList();
-
+                Console.WriteLine("3");
                 List<Articulo> Articulos = listaDeArticulos.Table.Select(
                     articulo => new Articulo
                     {

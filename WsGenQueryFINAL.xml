@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1c832705-01ee-49b8-baf6-c01335242c21" activeEnvironment="Default" name="WsGenQuery" resourceRoot="${projectDir}" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="04a01d62-f65f-4dc3-9295-3162191beb77" wsaVersion="NONE" name="wsGenQuerySoap12" type="wsdl" bindingName="{http://wsGenQueryFacade/}wsGenQuerySoap12" soapVersion="1_2" anonymous="optional" definition="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl"><con:part><con:url>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl</con:url><con:content><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>401 - Unauthorized: Access is denied due to invalid credentials.</title>
+    <style type="text/css">
+      <!--body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}-->
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Server Error</h1>
+    </div>
+    <div id="content">
+      <div class="content-container">
+        <fieldset>
+          <h2>401 - Unauthorized: Access is denied due to invalid credentials.</h2>
+          <h3>You do not have permission to view this directory or page using the credentials that you supplied.</h3>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>]]></con:content><con:type>http://www.w3.org/1999/xhtml</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint></con:endpoints><con:operation id="359cf57a-544a-4c41-ad30-1741e934213d" isOneWay="false" action="http://wsGenQueryFacade/GetData" name="GetData" bindingOperationName="GetData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="58f9867d-1ad0-418f-a38e-ce53b8ab89ea" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsg="http://wsGenQueryFacade/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsg:GetData>
+         <!--Optional:-->
+         <wsg:keyCode>INCONCERT_ARTICULOS</wsg:keyCode>
+         <!--Optional:-->
+         <wsg:parameters><params><modificado>19800101</modificado></params></wsg:parameters>
+      </wsg:GetData>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>TeleShoppingFWS1</con:username><con:password>Tele5HopPing&amp;b1T+.-</con:password><con:domain>BitERPSuiteTSG1</con:domain><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsGenQueryFacade/wsGenQuerySoap/GetDataRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="a8763cf0-a4c2-4bdc-a9d5-a9bce6f06522" wsaVersion="NONE" name="wsGenQuerySoap" type="wsdl" bindingName="{http://wsGenQueryFacade/}wsGenQuerySoap" soapVersion="1_1" anonymous="optional" definition="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl"><con:part><con:url>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://wsGenQueryFacade/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://wsGenQueryFacade/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wsGenQueryFacade/">
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyCode" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetIn">
+    <wsdl:part name="keyCode" type="s:string"/>
+    <wsdl:part name="parameters" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostIn">
+    <wsdl:part name="keyCode" type="s:string"/>
+    <wsdl:part name="parameters" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:portType name="wsGenQuerySoap">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn"/>
+      <wsdl:output message="tns:GetDataSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsGenQueryHttpGet">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpGetIn"/>
+      <wsdl:output message="tns:GetDataHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsGenQueryHttpPost">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpPostIn"/>
+      <wsdl:output message="tns:GetDataHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsGenQuerySoap" type="tns:wsGenQuerySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://wsGenQueryFacade/GetData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsGenQuerySoap12" type="tns:wsGenQuerySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://wsGenQueryFacade/GetData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsGenQueryHttpGet" type="tns:wsGenQueryHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsGenQueryHttpPost" type="tns:wsGenQueryHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsGenQuery">
+    <wsdl:port name="wsGenQuerySoap" binding="tns:wsGenQuerySoap">
+      <soap:address location="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="wsGenQuerySoap12" binding="tns:wsGenQuerySoap12">
+      <soap12:address location="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="wsGenQueryHttpGet" binding="tns:wsGenQueryHttpGet">
+      <http:address location="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="wsGenQueryHttpPost" binding="tns:wsGenQueryHttpPost">
+      <http:address location="https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint></con:endpoints><con:operation id="15630d4a-9e04-4df6-8fbd-bc16f54fa3eb" isOneWay="false" action="http://wsGenQueryFacade/GetData" name="GetData" bindingOperationName="GetData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a5e051ea-c3e9-472b-8121-29ad3f7a6ea6" name="INCONCERT_ARTICULOS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsg="http://wsGenQueryFacade/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsg:GetData>\r
+         <!--Optional:-->\r
+         <wsg:keyCode>INCONCERT_ARTICULOS</wsg:keyCode>\r
+         <!--Optional:-->\r
+         <wsg:parameters><![CDATA[<params><modificado>20231017</modificado></params>]]]]>><![CDATA[</wsg:parameters>\r
+      </wsg:GetData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>TeleShoppingFWS1</con:username><con:password>Tele5HopPing&amp;b1T+.-</con:password><con:domain>BitERPSuiteTSG1</con:domain><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsGenQueryFacade/GetData"/><con:wsrmConfig version="1.2"/></con:call><con:call id="61776b50-fae7-481a-b7bf-3033b04b522e" name="INCONCERT_CUSTOMER_UPD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsg="http://wsGenQueryFacade/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsg:GetData>\r
+         <!--Optional:-->\r
+         <wsg:keyCode>INCONCERT_CUSTOMER_UPD</wsg:keyCode>\r
+         <!--Optional:-->\r
+         <wsg:parameters><![CDATA[<params><Doc>210705480011</Doc><Nombres></Nombres><Apellidos></Apellidos><FechaNac>19950623</FechaNac><Telefono>24108200</Telefono><Celular>099999999</Celular><Direccion>Canelones</Direccion><NroPuerta>1738</NroPuerta><BisPiso>Bis</BisPiso><Apto>apto.201</Apto><Entre1>Gaboto</Entre1><Entre2>Magallanes</Entre2><Ciudad>Montevideo</Ciudad><Barrio>Cordon</Barrio><Mail>info@bitsistemas.com</Mail><Justificacion>Texto de prueba a modo de justificacion</Justificacion><RazonSocial>Bit S.R.L.</RazonSocial><Campana>Promo Verano 2022</Campana><Agente>BitPrueba</Agente><NroLlamada>1926</NroLlamada><Resultado>No compro nada</Resultado></params>]]]]>><![CDATA[</wsg:parameters>\r
+      </wsg:GetData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>TeleShoppingFWS1</con:username><con:password>Tele5HopPing&amp;b1T+.-</con:password><con:domain>BitERPSuiteTSG1</con:domain><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsGenQueryFacade/GetData"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b80c57ac-2002-4712-82e2-2205506a0771" name="INCONCERT_TIPOCAMBIO"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://biterpsuitetsg1.biterpsuite.com:4431/WsGenQueryFacade/wsGenQuery.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsg="http://wsGenQueryFacade/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsg:GetData>\r
+         <!--Optional:-->\r
+         <wsg:keyCode>INCONCERT_TIPOCAMBIO</wsg:keyCode>\r
+         <!--Optional:-->\r
+         <wsg:parameters><![CDATA[<params><Fecha>20230224</Fecha></params>]]]]>><![CDATA[</wsg:parameters>\r
+      </wsg:GetData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>TeleShoppingFWS1</con:username><con:password>Tele5HopPing&amp;b1T+.-</con:password><con:domain>BitERPSuiteTSG1</con:domain><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsGenQueryFacade/GetData"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
